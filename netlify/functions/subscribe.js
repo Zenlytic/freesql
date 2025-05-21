@@ -22,15 +22,17 @@ exports.handler = async function(event, context) {
       };
     }
 
-    // Initialize the Google Sheet - from credentials set as environment variables
+    console.log('Initializing Google Spreadsheet with ID:', process.env.GOOGLE_SHEET_ID);
+    // Initialize the Google Sheet
     const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID);
-
-    // Authenticate
+    
+    console.log('Authenticating with service account');
+    // Authenticate with service account
     await doc.useServiceAccountAuth({
       client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
       private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
     });
-
+    
     // Load document properties and worksheets
     await doc.loadInfo();
 
@@ -50,7 +52,9 @@ exports.handler = async function(event, context) {
       body: JSON.stringify({ message: "Email subscribed successfully" })
     };
   } catch (error) {
-    console.error("Subscription error:", error);
+    console.error("Subscription error:", error.message);
+    console.error("Error stack:", error.stack);
+    console.error("Error details:", JSON.stringify(error, Object.getOwnPropertyNames(error)));
     
     return {
       statusCode: 500,
