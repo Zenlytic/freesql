@@ -23,26 +23,22 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <Database className="text-red-700 h-8 w-8 mr-2" />
-            <span className="text-xl font-bold tracking-tight text-white">FreeSQL</span>
+            {/* <Database className="text-red-700 h-8 w-8 mr-2" /> */}
+            <span className="text-xl font-bold tracking-tight text-red-800">FREE SQL</span>
           </div>
-
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#manifesto" className="text-white hover:text-red-500 transition-colors">
+            <a href="https://www.zenlytic.com/manifesto" className="text-red-700 font-bold hover:text-red-800 transition-colors" target="_blank" rel="noopener noreferrer">
               Manifesto
             </a>
-            <a href="#vision" className="text-white hover:text-red-500 transition-colors">
-              Vision
-            </a>
-            <a href="#signup" className="text-white hover:text-red-500 transition-colors">
+            <a href="#signup" className="text-red-700 font-bold hover:text-red-800 transition-colors">
               Join
             </a>
           </nav>
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-white"
+            className="md:hidden text-red-500"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -54,21 +50,21 @@ const Header: React.FC = () => {
           <div className="md:hidden mt-4 pb-4 flex flex-col space-y-4">
             <a 
               href="#manifesto" 
-              className="text-white hover:text-red-500 transition-colors"
+              className="text-red-500 hover:text-red-700 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Manifesto
             </a>
             <a 
               href="#vision" 
-              className="text-white hover:text-red-500 transition-colors"
+              className="text-red-500 hover:text-red-700 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Vision
             </a>
             <a 
               href="#signup" 
-              className="text-white hover:text-red-500 transition-colors"
+              className="text-red-500 hover:text-red-700 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Join

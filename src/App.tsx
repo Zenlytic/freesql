@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="font-sans min-h-screen bg-black text-white">
-      {/* <Header /> */}
+      <Header />
       <main>
         <Hero />
         <Manifesto />

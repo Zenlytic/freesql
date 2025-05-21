@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Twitter, Database } from 'lucide-react';
+import { Linkedin, Database } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -9,29 +9,23 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
-            <Database className="text-red-700 h-6 w-6 mr-2" />
-            <span className="text-lg font-bold text-white">FreeSQL</span>
+            
+            <span className="text-lg font-bold text-white">Free SQL</span>
           </div>
-          
           <div className="flex space-x-6 mb-4 md:mb-0">
             <a 
-              href="#" 
+              href="https://www.linkedin.com/company/zenlytic" 
               className="text-gray-400 hover:text-red-500 transition-colors"
-              aria-label="GitHub"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Github size={20} />
-            </a>
-            <a 
-              href="#" 
-              className="text-gray-400 hover:text-red-500 transition-colors"
-              aria-label="Twitter"
-            >
-              <Twitter size={20} />
+              <Linkedin size={20} />
             </a>
           </div>
           
           <div className="text-sm text-gray-500">
-            &copy; {currentYear} FreeSQL. All rights reserved.
+            &copy; {currentYear} Zenlytic. All rights reserved.
           </div>
         </div>
         
