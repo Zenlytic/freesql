@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-red: #B91C1C;
+  --dark-red: #7F1D1D;
+  --paper: #F5DEB3;
+  --black: #0F0F0F;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply antialiased;
+  }
+  
+  body {
+    @apply bg-[var(--paper)] text-black font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .triangle-eye {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  
+  .triangle-eye::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    border: 3px solid var(--paper);
+    border-radius: 50%;
+  }
+  
+  .triangle-eye::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    transform: translate(-50%, -50%);
+    background-color: var(--paper);
+    border-radius: 50%;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-radial {
+    background-image: radial-gradient(var(--tw-gradient-stops));
+  }
+  
+  .bg-sunburst {
+    background: var(--paper);
+    position: relative;
+  }
+  
+  .bg-sunburst::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-conic-gradient(
+      from 0deg,
+      var(--primary-red) 0deg 10deg,
+      var(--paper) 10deg 20deg
+    );
+    opacity: 0.15;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 0 15px rgba(127, 29, 29, 0.5);
+  }
+  
+  .vintage-border {
+    border: 8px double var(--primary-red);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
