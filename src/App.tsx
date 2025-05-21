@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 function App() {
   useEffect(() => {
     // Update document title
-    document.title = "FreeSQL - Free the LLMs, Free the SQL";
+    document.title = "FreeSQL - Free the LLMs, Free SQL";
     
     // Add meta description for SEO
     const metaDescription = document.createElement('meta');
@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="font-sans min-h-screen bg-black text-white">
-      <Header />
+      {/* <Header /> */}
       <main>
         <Hero />
         <Manifesto />

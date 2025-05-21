@@ -79,7 +79,7 @@ const Manifesto: React.FC = () => {
         <p className="font-semibold text-2xl md:text-3xl mb-6 text-red-700">
           For 40 years we have been teaching humans to speak computer language.
         </p>
-        <p className="mb-6">
+        <p className="text-xl md:text-2xl font-bold">
           Computers now speak human language. And they can write SQL better than almost everyone.
         </p>
         <p className="text-xl md:text-2xl font-bold">
@@ -90,26 +90,26 @@ const Manifesto: React.FC = () => {
       <ManifestoSection 
         id="lesson" 
         background="bg-red-700" 
-        align="right"
+        align="left"
         textColor="text-paper"
-        icon={<Bot size={48} className="text-paper" />}
+        // icon={<Bot size={48} className="text-paper" />}
       >
-        <p className="font-semibold text-2xl md:text-3xl mb-6">
+        <p className="font-bold text-2xl md:text-3xl mb-6">
           The bitter lesson is coming to the data world.
         </p>
-        <p className="mb-6">
+        <p className="text-xl md:text-2xl ">
           We can learn from other industries or keep the analytics adoption rate at 30%.
         </p>
-        <p className="text-xl md:text-2xl font-bold">
-          The gap between facts and decisions is still complicated and takes days.
+        <p className="text-xl md:text-2xl ">
+          The gap between facts and decisions is still wide.
         </p>
       </ManifestoSection>
 
       <ManifestoSection 
         id="vision" 
         background="bg-paper"
-        align="center"
-        icon={<LineChart size={48} />}
+        align="left"
+        // icon={<LineChart size={48} />}
       >
         <p className="font-semibold text-2xl md:text-3xl mb-6">
           The gap between facts and decisions needs to close.
@@ -118,13 +118,16 @@ const Manifesto: React.FC = () => {
           Let's let the LLMs do what they are great at, writing code.
         </p>
         <p className="mb-6">
-          The next generation of data tools will not constrain LLMs. It will give context and clarity to the code LLMs produce.
+          The next generation of data tools will not constrain LLMs. 
         </p>
-        <div className="mt-10 flex justify-center">
+        <p className="mb-6">
+          It will give <em>context</em> and <em>clarity</em> to the code LLMs produce.
+        </p>
+        {/* <div className="mt-10 flex justify-center">
           <p className="text-3xl md:text-4xl font-bold inline-flex items-center vintage-border p-4">
             Change is coming <ArrowRight className="ml-2" />
           </p>
-        </div>
+        </div> */}
       </ManifestoSection>
 
       <ManifestoSection 
@@ -132,7 +135,7 @@ const Manifesto: React.FC = () => {
         background="bg-red-700"
         align="center"
         textColor="text-paper"
-        icon={<Database size={48} className="text-paper" />}
+        // icon={<Database size={48} className="text-paper" />}
       >
         <p className="font-bold text-3xl md:text-5xl mb-8">
           Free SQL with us.

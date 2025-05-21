@@ -20,12 +20,24 @@ const SignupForm: React.FC = () => {
 
     setIsSubmitting(true);
 
-    // Simulate API call
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Send email to our Netlify function
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+      
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to subscribe');
+      }
+      
       setIsSubmitted(true);
       setEmail('');
     } catch (err) {
+      console.error('Subscription error:', err);
       setError('Failed to submit. Please try again.');
     } finally {
       setIsSubmitting(false);
