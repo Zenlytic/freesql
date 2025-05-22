@@ -8,12 +8,12 @@ import Footer from './components/Footer';
 function App() {
   useEffect(() => {
     // Update document title
-    document.title = "FreeSQL - Free the LLMs, Free SQL";
+    document.title = "Free SQL - Free the LLMs, Free SQL";
     
     // Add meta description for SEO
     const metaDescription = document.createElement('meta');
     metaDescription.name = 'description';
-    metaDescription.content = 'FreeSQL is revolutionizing data analytics by unleashing the power of LLMs to write SQL. Join the movement launching Summer 2025.';
+    metaDescription.content = 'Free SQL is revolutionizing data analytics by unleashing the power of LLMs to write SQL. Join the movement launching Summer 2025.';
     document.head.appendChild(metaDescription);
     
     return () => {

@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
         <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-1000 delay-300 mb-8">
             <img 
               src="/free_sql_eye.png" 
-              alt="FreeSQL All-Seeing Eye" 
+              alt="Free SQL All-Seeing Eye" 
               className="w-full max-w-[700px] h-auto"
             />
         </div>
