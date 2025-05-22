@@ -28,7 +28,7 @@ const Header: React.FC = () => {
           </div>
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="https://www.zenlytic.com/manifesto" className="text-red-700 font-bold hover:text-red-800 transition-colors" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.zenlytic.com/manifesto?utm_source=freesql" className="text-red-700 font-bold hover:text-red-800 transition-colors" target="_blank" rel="noopener noreferrer">
               Manifesto
             </a>
             <a href="#signup" className="text-red-700 font-bold hover:text-red-800 transition-colors">

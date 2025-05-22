@@ -14,11 +14,10 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex space-x-6 mb-4 md:mb-0">
             <a 
-              href="https://www.linkedin.com/company/zenlytic" 
+              href="https://www.linkedin.com/company/zenlytic?utm_source=freesql" 
               className="text-gray-400 hover:text-red-500 transition-colors"
               aria-label="LinkedIn"
               target="_blank"
-              rel="noopener noreferrer"
             >
               <Linkedin size={20} />
             </a>
